@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}GitHub API{% endblock %}</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: sans-serif;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #24292e;
+            color: white;
+            padding: 10px;
+        }
+        
+        /* Form Styles */
+        form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            flex: 1;
+            font-size: 16px;
+        }
+        
+        button[type="submit"] {
+            background-color: #24292e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        /* Table Styles */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th {
+            background-color: #24292e;
+            color: white;
+            padding: 10px;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GitHub API Search</h1>
+    </header>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
